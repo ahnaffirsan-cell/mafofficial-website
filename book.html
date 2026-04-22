@@ -1,45 +1,128 @@
 <title>MAF Official Website</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Echolon: The Beginning. An original superhero universe created by Mohammed Ahnaf Firsan (MAF).">
 <title>The Echolon</title>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "The Echolon: The Beginning",
+  "author": {
+    "@type": "Person",
+    "name": "Mohammed Ahnaf Firsan"
+  },
+  "genre": "Superhero Fiction"
+}
+</script>
+
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0b0018;
-  color:white;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0b0018;
+  color: #e0e0e0;
+  padding-bottom: 70px;
 }
 
-section{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px 0;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
 }
 
-h2{
-  color:#c77dff;
+/* Staggering section animations */
+section:nth-of-type(1) { animation-delay: 0.1s; }
+section:nth-of-type(2) { animation-delay: 0.3s; }
+section:nth-of-type(3) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.card{
-  background:#120022;
-  padding:20px;
-  border-radius:12px;
-  margin-top:20px;
+h2 {
+  color: #c77dff;
+  border-bottom: 1px solid rgba(199, 125, 255, 0.3);
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.characters{
-  display:grid;
-  gap:20px;
+.card {
+  background: #1a0033;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid rgba(157, 78, 221, 0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  font-size: 1.1em;
+  line-height: 1.6;
 }
 
-.char-card{
-  background:#120022;
-  padding:20px;
-  border-radius:12px;
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.char-card {
+  background: #1a0033;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(157, 78, 221, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.char-card h3 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.char-card p {
+  margin-bottom: 0;
+  color: #bbb;
+}
+
+/* Hover Animation for Character Cards */
+.char-card:hover {
+  transform: translateY(-10px);
+  border-color: #c77dff;
+  box-shadow: 0 15px 30px rgba(199, 125, 255, 0.2);
+}
+
+/* Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(20, 0, 40, 0.95);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-top: 1px solid rgba(199, 125, 255, 0.2);
+  z-index: 1000;
+}
+
+.bottom-nav a {
+  color: #c77dff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #c77dff;
 }
 </style>
 </head>
@@ -47,42 +130,36 @@ h2{
 <body>
 
 <section>
-<h2>Teaser</h2>
-<div class="card">
-<p>In 2026, mutants are hunted or controlled. Kyle and John choose neither.</p>
-<p><strong>Welcome to the Echelon.</strong></p>
-</div>
+  <h2>Teaser</h2>
+  <div class="card">
+    <p>In 2026, mutants are hunted or controlled. Kyle and John choose neither.</p>
+    <p><strong>Welcome to the Echelon.</strong></p>
+  </div>
 </section>
 
 <section>
-<h2>Synopsis</h2>
-<div class="card">
-<p>Kyle and John build a team to fight the Illuminati and survive a coming war.</p>
-</div>
+  <h2>Synopsis</h2>
+  <div class="card">
+    <p>Kyle and John build a team to fight the Illuminati and survive a coming war.</p>
+  </div>
 </section>
 
 <section>
-<h2>Main Characters</h2>
-
-<div class="characters">
-
-<div class="char-card">
-<h3>Kyle Anderson</h3>
-<p>Strategist and founder of Echelon.</p>
-</div>
-
-<div class="char-card">
-<h3>John Reyes</h3>
-<p>Electrokinetic powerhouse.</p>
-</div>
-
-<div class="char-card">
-<h3>The Butcher</h3>
-<p>Illuminati's deadly assassin.</p>
-</div>
-
-</div>
-
+  <h2>Main Characters</h2>
+  <div class="characters">
+    <div class="char-card">
+      <h3>Kyle Anderson</h3>
+      <p>Strategist and founder of Echelon.</p>
+    </div>
+    <div class="char-card">
+      <h3>John Reyes</h3>
+      <p>Electrokinetic powerhouse.</p>
+    </div>
+    <div class="char-card">
+      <h3>The Butcher</h3>
+      <p>Illuminati's deadly assassin.</p>
+    </div>
+  </div>
 </section>
 
 <div class="bottom-nav">
