@@ -1,61 +1,131 @@
 <title>MAF Official Website</title>
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mohammed Ahnaf Firsan (MAF) is a Sri Lankan novelist, content creator, and digital personality known for The Echolon.">
 <title>MAF</title>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammed Ahnaf Firsan",
+  "alternateName": "MAF",
+  "birthDate": "2011-03-10",
+  "birthPlace": "Colombo, Sri Lanka",
+  "jobTitle": ["Novelist", "Content Creator", "Digital Personality"],
+  "url": "https://ahnaffirsan-cell.github.io/mafofficial-website/",
+  "sameAs": [
+    "https://www.youtube.com/@maf_3_official",
+    "https://www.tiktok.com/@maf_3_official",
+    "https://x.com/AhnafFirsan",
+    "https://www.instagram.com/maf_3_official",
+    "https://www.threads.com/@maf_3_official"
+  ]
+}
+</script>
+
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#0b0018;
-  color:white;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0b0018;
+  color: white;
+  overflow-x: hidden;
 }
 
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(135deg,#6a00ff,#12002b);
+/* Background Animation */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #2b005c, #0b0018, #3b0086);
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
 }
 
-.hero h1{
-  font-size:80px;
-  margin:0;
-  letter-spacing:4px;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.hero p{
-  opacity:0.9;
+/* Entrance Animations */
+.hero h1, .hero p, .btn {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
 }
 
-.btn{
-  margin-top:20px;
-  padding:12px 25px;
-  background:#9d4edd;
-  border-radius:10px;
-  text-decoration:none;
-  color:white;
+.hero h1 {
+  font-size: 80px;
+  margin: 0;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(199, 125, 255, 0.5);
+  animation-delay: 0.2s;
 }
 
-.bottom-nav{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  background:#140028;
-  display:flex;
-  justify-content:space-around;
-  padding:10px 0;
+.hero p {
+  opacity: 0.9;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  animation-delay: 0.5s;
 }
 
-.bottom-nav a{
-  color:#c77dff;
-  text-decoration:none;
+/* Button Styling & Hover */
+.btn {
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #9d4edd;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(157, 78, 221, 0.4);
+  animation-delay: 0.8s;
+}
+
+.btn:hover {
+  background: #c77dff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(199, 125, 255, 0.7);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(20, 0, 40, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+  border-top: 1px solid rgba(199, 125, 255, 0.2);
+}
+
+.bottom-nav a {
+  color: #c77dff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.bottom-nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #c77dff;
 }
 </style>
 </head>
@@ -65,7 +135,6 @@ body{
 <div class="hero">
   <h1>MAF</h1>
   <p>Novelist | Content Creator | Digital Personality</p>
-
   <a class="btn" href="about.html">Enter Profile</a>
 </div>
 
@@ -77,3 +146,4 @@ body{
 
 </body>
 </html>
+
